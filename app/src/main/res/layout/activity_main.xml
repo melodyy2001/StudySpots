@@ -6,13 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+
+    <Button
+        android:id="@+id/search_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginEnd="256dp"
+        android:layout_marginBottom="512dp"
+        android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Input box to search for study spot -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="Find a study spot"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintStart_toEndOf="@id/search_text"
+        app:layout_constraintTop_toTopOf="@id/search_text"
+        />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
