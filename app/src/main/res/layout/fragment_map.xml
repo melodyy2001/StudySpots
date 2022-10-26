@@ -6,9 +6,22 @@
     tools:context=".MapFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
+        android:id="@+id/mapText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="30dp"
         android:text="Map of campus" />
+
+    <Button
+        android:id="@+id/listButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Study Spots"
+        android:textSize="12sp">
+
+    </Button>
 
 </FrameLayout>
