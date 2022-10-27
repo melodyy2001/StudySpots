@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation.findNavController
-
+import androidx.navigation.fragment.findNavController
+//import com.vima.studyspots.databinding.FragmentAddItemBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -16,7 +17,7 @@ import androidx.navigation.Navigation.findNavController
  * create an instance of this fragment.
  */
 class MapFragment : Fragment() {
-
+    //private lateinit var binding: MapFragmentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -29,7 +30,7 @@ class MapFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_map, container, false)
         val navToList = view.findViewById<Button>(R.id.listButton)
         navToList.setOnClickListener {
-            findNavController(view).navigate(R.id.action_mapFragment_to_studyListFragment)
+            findNavController().navigate(R.id.action_mapFragment_to_studyListFragment)
         }
         return view
     }
