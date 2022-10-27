@@ -1,5 +1,6 @@
 package com.vima.studyspots
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -30,8 +31,17 @@ class MapFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_map, container, false)
         val navToList = view.findViewById<Button>(R.id.listButton)
         navToList.setOnClickListener {
-            findNavController().navigate(R.id.action_mapFragment_to_studyListFragment)
+            goToList()
+            //findNavController().navigate(R.id.action_mapFragment_to_studyListFragment)
         }
         return view
+    }
+
+
+    // for play button
+    fun goToList() {
+        val intent = Intent(getActivity(), StudyListActivity::class.java)
+        //intent.putExtra("Name", name)
+        startActivity(intent)
     }
 }
