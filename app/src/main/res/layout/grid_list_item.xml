@@ -16,9 +16,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- An ImageView for the images of our desserts, with a fixed height-->
+        <!-- An ImageView for the images of study buildings, with a fixed height-->
         <ImageView
-            android:id="@+id/dessert_img"
+            android:id="@+id/building_img"
             android:layout_width="match_parent"
             android:layout_height="194dp"
             android:importantForAccessibility="no"
@@ -28,43 +28,40 @@
             app:layout_constraintEnd_toEndOf="parent"
             />
 
-        <!-- A TextView for the name of our desserts, with a fixed height as well-->
+        <!-- A TextView for the name of the study buildings, with a fixed height as well-->
         <TextView
-            android:id = "@+id/dessert_name"
+            android:id = "@+id/building_name"
             android:layout_width="wrap_content"
             android:layout_height = "wrap_content"
-            android:text = "Cheesecake"
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dessert_img"
+            app:layout_constraintTop_toBottomOf="@id/building_img"
             />
 
         <!-- A TextView for our rating of the desserts out of 5-->
         <TextView
-            android:id = "@+id/dessert_rating"
+            android:id = "@+id/building_location"
             android:layout_width="wrap_content"
             android:layout_height = "wrap_content"
-            android:text = "3.5/5"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintStart_toStartOf="@id/dessert_name"
-            app:layout_constraintTop_toBottomOf="@id/dessert_name"
-            app:layout_constraintBottom_toTopOf="@id/Serving_size"
+            app:layout_constraintStart_toStartOf="@id/building_name"
+            app:layout_constraintTop_toBottomOf="@id/building_name"
+            app:layout_constraintBottom_toTopOf="@id/noise_building"
             />
 
-        <!-- A TextView for the serving size of the desserts-->
+        <!-- A TextView for the noise level of the study building-->
         <TextView
-            android:id = "@+id/Serving_size"
+            android:id = "@+id/noise_building"
             android:layout_width="wrap_content"
             android:layout_height = "wrap_content"
-            android:text = "Serves two"
             android:layout_marginBottom="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintStart_toStartOf="@id/dessert_rating"
-            app:layout_constraintTop_toBottomOf="@id/dessert_rating"
+            app:layout_constraintStart_toStartOf="@id/building_location"
+            app:layout_constraintTop_toBottomOf="@id/building_location"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 
