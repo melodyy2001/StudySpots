@@ -5,8 +5,14 @@
     android:layout_height="match_parent"
     tools:context=".MapFragment">
 
-
-
+    <!-- Map Fragment -->
+    <fragment
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <!-- Input box to search for study spot -->
     <EditText
         android:id="@+id/search_bar"
