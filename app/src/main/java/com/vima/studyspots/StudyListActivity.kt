@@ -15,6 +15,7 @@ class StudyListActivity : AppCompatActivity() {
         recyclerView.adapter = StudySpotAdapter(applicationContext)
 
         recyclerView.setHasFixedSize(true)
+
     }
 
 

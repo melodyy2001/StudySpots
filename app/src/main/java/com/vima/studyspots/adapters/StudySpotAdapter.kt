@@ -1,12 +1,17 @@
 package com.vima.studyspots.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.vima.studyspots.ProfileActivity
 import com.vima.studyspots.R
 import com.vima.studyspots.data.DataSource
 
@@ -17,7 +22,7 @@ import com.vima.studyspots.data.DataSource
  */
 class StudySpotAdapter (
     private val context: Context?,
-    ): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
+): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
 
         // Get the study spots data into a list from the DataSource
         private val studySpotsList = DataSource.studySpots
@@ -52,6 +57,11 @@ class StudySpotAdapter (
             holder.buildingName.text = curData.name
             holder.location.text = curData.location
             holder.noiseLevel.text = curData.noiseLevel.toString()
+
+            holder.itemView.setOnClickListener {
+                // what to do when clicking on item
+                goToProfile()
+            }
             // MISSING PIECES ON GETSTRING METHOD
             // LAST TEXTVIEW IS SUPPOSED TO BE A DOUBLE
             val resources = context?.resources
@@ -61,5 +71,13 @@ class StudySpotAdapter (
             // Set the text for the current building's noise level
            // holder.textView3.text = resources?.getString(R.string., curData.noiseLevel)
 
+        }
+
+        // for play button
+        fun goToProfile() {
+            val intent = Intent(context, ProfileActivity::class.java)
+            //intent.putExtra("Name", name)
+            intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
+            context?.startActivity(intent)
         }
     }
