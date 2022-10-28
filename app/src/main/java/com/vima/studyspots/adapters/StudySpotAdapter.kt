@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.vima.studyspots.ProfileActivity
 import com.vima.studyspots.R
 import com.vima.studyspots.data.DataSource
+import com.vima.studyspots.model.StudySpot
 
 
 /**
@@ -22,13 +23,19 @@ import com.vima.studyspots.data.DataSource
  */
 class StudySpotAdapter (
     private val context: Context?,
-): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
+    ): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
 
         // Get the study spots data into a list from the DataSource
         private val studySpotsList = DataSource.studySpots
-        /**
-         * Initialize view elements
-         */
+
+        companion object {
+            fun getStudySpotList(position: Int): StudySpot {
+                val studySpotsList = DataSource.studySpots
+                val spot = studySpotsList[position]
+                return spot
+            }
+        }
+        //Initialize view elements
         class StudySpotViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
             // Initialize the list contents
             val imageView: ImageView = view!!.findViewById(R.id.building_img)
@@ -60,7 +67,7 @@ class StudySpotAdapter (
 
             holder.itemView.setOnClickListener {
                 // what to do when clicking on item
-                goToProfile()
+                goToProfile(position)
             }
             // MISSING PIECES ON GETSTRING METHOD
             // LAST TEXTVIEW IS SUPPOSED TO BE A DOUBLE
@@ -74,9 +81,9 @@ class StudySpotAdapter (
         }
 
         // for play button
-        fun goToProfile() {
+        fun goToProfile(position: Int) {
             val intent = Intent(context, ProfileActivity::class.java)
-            //intent.putExtra("Name", name)
+            intent.putExtra("Position", position.toString())
             intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
             context?.startActivity(intent)
         }
