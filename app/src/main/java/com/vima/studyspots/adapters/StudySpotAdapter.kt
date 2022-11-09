@@ -22,11 +22,11 @@ import com.vima.studyspots.model.StudySpot
  * from the appropriate data source
  */
 class StudySpotAdapter (
-    private val context: Context?,
+    private val context: Context?, private val searchTerm: String,
     ): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
 
         // Get the study spots data into a list from the DataSource
-        private val studySpotsList = DataSource.studySpots
+        private val studySpotsList = filterStudySpots(searchTerm)
 
         companion object {
             fun getStudySpotList(position: Int): StudySpot {
@@ -34,7 +34,23 @@ class StudySpotAdapter (
                 val spot = studySpotsList[position]
                 return spot
             }
+
         }
+        // Set filtered list of study spots
+        fun filterStudySpots(searchTerm: String): List<StudySpot> {
+            val allSpots = DataSource.studySpots
+            if (searchTerm == "") {
+                return allSpots
+            }
+            val filteredList = mutableListOf<StudySpot>()
+            for (spot in allSpots) {
+                if (spot.name.contains(searchTerm, ignoreCase = true) || spot.location.contains(searchTerm, ignoreCase = true)) {
+                    filteredList.add(spot)
+                }
+            }
+            return filteredList
+        }
+
         //Initialize view elements
         class StudySpotViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
             // Initialize the list contents
@@ -79,7 +95,6 @@ class StudySpotAdapter (
            // holder.textView3.text = resources?.getString(R.string., curData.noiseLevel)
 
         }
-
         // for play button
         fun goToProfile(position: Int) {
             val intent = Intent(context, ProfileActivity::class.java)
@@ -87,4 +102,5 @@ class StudySpotAdapter (
             intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
             context?.startActivity(intent)
         }
+
     }
