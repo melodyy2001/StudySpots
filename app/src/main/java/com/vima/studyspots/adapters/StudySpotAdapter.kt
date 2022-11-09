@@ -26,12 +26,12 @@ class StudySpotAdapter (
     ): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
 
         // Get the study spots data into a list from the DataSource
-        private val studySpotsList = filterStudySpots(searchTerm)
+        val studySpotsList = filterStudySpots(searchTerm)
 
         companion object {
             fun getStudySpotList(position: Int): StudySpot {
-                val studySpotsList = DataSource.studySpots
-                val spot = studySpotsList[position]
+                val studySpotList = DataSource.studySpots
+                val spot = studySpotList[position]
                 return spot
             }
 
@@ -57,7 +57,7 @@ class StudySpotAdapter (
             val imageView: ImageView = view!!.findViewById(R.id.building_img)
             val buildingName: TextView = view!!.findViewById(R.id.building_name)
             val location: TextView = view!!.findViewById(R.id.building_location)
-            val noiseLevel: TextView = view!!.findViewById(R.id.noise_building)
+            val description: TextView = view!!.findViewById(R.id.description_building)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudySpotViewHolder {
@@ -79,7 +79,7 @@ class StudySpotAdapter (
             // Set the text for the current member's name
             holder.buildingName.text = curData.name
             holder.location.text = curData.location
-            holder.noiseLevel.text = curData.noiseLevel.toString()
+            holder.description.text = curData.description
 
             holder.itemView.setOnClickListener {
                 // what to do when clicking on item

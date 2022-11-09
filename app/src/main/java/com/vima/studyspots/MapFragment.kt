@@ -60,7 +60,7 @@ class MapFragment : Fragment() {
     // for play button
     fun goToList() {
         val intent = Intent(getActivity(), StudyListActivity::class.java)
-        //intent.putExtra("Name", name)
+        intent.putExtra("SearchTerm", "")
         startActivity(intent)
     }
 }
