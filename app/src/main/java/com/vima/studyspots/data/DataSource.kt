@@ -48,6 +48,30 @@ object DataSource {
                     "on each of floors 3-6, as well as a computer lab and a back patio.",
                     mutableListOf(StudyRoom("GDC Lobby", "2/5", "2/5",
                 "Location of newly opened Lucky Lab.", "2.5/5"))
-        )
+        ),
+        StudySpot(
+            R.drawable.geoscience_student_center,
+            "Jackson Geological Sciences Building (JGB)",
+            "2305 SPEEDWAY, AUSTIN, TX 78712",
+            "The Jackson Geosciences Building is tucked away behind the GDC and is" +
+                    " the location of a wide range of study areas including a student center off the " +
+                    "front patio and a library on the second floor.",
+            mutableListOf(StudyRoom("Holland Family Student Center", "2.5/5", "3/5",
+                "Enter from the outdoor patio on the South side of JGB", "2/5"),
+                StudyRoom("Geosciences library", "1/5", "3/5",
+                    "Group study tables and individual tables are scattered around the library.", "2/5"))
+        ),
+        StudySpot(
+                R.drawable.pcl_stem_area,
+        "Perry-Castañeda Library (PCL)",
+        "101 E. 21st Street\n" +
+                "Austin, Texas 78712",
+        "The PCL is the largest on-campus library, located at the Southern tip of Speedway and featuring" +
+                "six floors, each with its own personality and set of unique study areas.",
+        mutableListOf(StudyRoom("Learning labs", "4/5", "4/5",
+            "Tucked behind the elevators on the entry level of the PCL", "4/5"),
+            StudyRoom("Reservable study rooms", "1/5", "4/5",
+                "Private rooms available for reservation on floors 2-6.", "Private"))
+    )
     )
 }

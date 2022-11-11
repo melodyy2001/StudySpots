@@ -79,7 +79,7 @@ class StudySpotAdapter (
             // Set the text for the current member's name
             holder.buildingName.text = curData.name
             holder.location.text = curData.location
-            holder.description.text = curData.description
+            holder.description.text = "Click me for more information"
 
             holder.itemView.setOnClickListener {
                 // what to do when clicking on item
