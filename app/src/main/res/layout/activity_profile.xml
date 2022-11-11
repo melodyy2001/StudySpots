@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Name"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagePreview" />
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Location"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name" />
@@ -47,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="Description"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/location" />
@@ -55,11 +58,12 @@
             android:id="@+id/roomsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Study rooms"
             android:layout_marginTop="32dp"
+            android:text="Study rooms"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/description"/>
+            app:layout_constraintTop_toBottomOf="@+id/description" />
 
         <TextView
             android:id="@+id/roomName"
@@ -75,8 +79,8 @@
         <!-- Button to go to next study spot -->
         <Button
             android:id="@+id/roomButtonRight"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginEnd="48dp"
             app:layout_constraintTop_toTopOf="@+id/roomName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,8 +89,8 @@
         <!-- Button to go to previous study spot -->
         <Button
             android:id="@+id/roomButtonLeft"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginStart="48dp"
             app:layout_constraintTop_toTopOf="@+id/roomName"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,6 +113,7 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="256dp"
             android:text="foot traffic"
+            android:textAlignment="viewStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/roomDescription" />
@@ -117,9 +122,10 @@
             android:id="@+id/comfortability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:layout_marginStart="128dp"
+            android:layout_marginTop="32dp"
             android:text="Comfortability"
+            android:textAlignment="viewStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/roomDescription" />
@@ -131,9 +137,23 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="256dp"
             android:text="Noise Level"
+            android:textAlignment="viewStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/footTraffic" />
+
+        <Button
+            android:id="@+id/buttonBookRoom"
+            android:layout_width="172dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="36dp"
+            android:text="Book room"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomDescription"
+            app:layout_constraintVertical_bias="0.953" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
