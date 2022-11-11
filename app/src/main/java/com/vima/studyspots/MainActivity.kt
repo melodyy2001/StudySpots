@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpTabs() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(MapFragment(), "Home")
-        adapter.addFragment(FavoritesFragment(), "Favorites")
+        adapter.addFragment(FavoritesFragment(), "About")
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
         viewPager.adapter = adapter
         val tabs = findViewById<TabLayout>(R.id.tabs)
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         // Set the icons
         tabs.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_home_24)
-        tabs.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_favorite_24)
+        tabs.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_info_24)
     }
 
     override fun onSupportNavigateUp(): Boolean {

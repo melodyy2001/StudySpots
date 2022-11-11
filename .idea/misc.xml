@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alean/AndroidStudioProjects/StudySpots/app/src/main/res/layout/fragment_map.xml" value="0.3392210144927536" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29569244384765625" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.26380368098159507" />
         <entry key="app/src/main/res/layout/activity_study_list.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.16770833333333332" />
         <entry key="app/src/main/res/layout/fragment_map.xml" value="0.13978494623655913" />
