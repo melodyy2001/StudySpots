@@ -5,10 +5,14 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager.widget.ViewPager
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.tabs.TabLayout
 import com.vima.studyspots.adapters.ViewPagerAdapter
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,5 +41,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        googleMap.addMarker(
+            MarkerOptions().position(LatLng(0.0,0.0))
+                .title("Marker")
+        )
     }
 }
