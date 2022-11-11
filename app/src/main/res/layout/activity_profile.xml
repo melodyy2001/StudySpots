@@ -76,7 +76,7 @@
             android:id="@+id/roomButtonRight"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginEnd="64dp"
+            android:layout_marginEnd="48dp"
             app:layout_constraintTop_toTopOf="@+id/roomName"
             app:layout_constraintEnd_toEndOf="parent"
             android:drawableBottom="@drawable/ic_baseline_chevron_right_24"/>
@@ -86,7 +86,7 @@
             android:id="@+id/roomButtonLeft"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="48dp"
             app:layout_constraintTop_toTopOf="@+id/roomName"
             app:layout_constraintStart_toStartOf="parent"
             android:drawableBottom="@drawable/ic_baseline_chevron_left_24"/>
