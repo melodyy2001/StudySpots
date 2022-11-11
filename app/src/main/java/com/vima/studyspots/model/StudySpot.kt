@@ -9,5 +9,7 @@ data class StudySpot (
     @DrawableRes val imageResourceId: Int,
     val name: String,
     val location: String,
-    val noiseLevel: Double
+    val description: String,
+    val studyRooms: MutableList<StudyRoom>
+
 )

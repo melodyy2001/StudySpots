@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".MapFragment">
 
+    <!-- Map Fragment: PUT BACK IN -->
+
     <!-- Input box to search for study spot -->
     <EditText
         android:id="@+id/search_bar"

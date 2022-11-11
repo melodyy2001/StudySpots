@@ -30,15 +30,15 @@
 
         <!-- A TextView for the name of the study buildings, with a fixed height as well-->
         <TextView
-            android:id = "@+id/building_name"
+            android:id="@+id/building_name"
             android:layout_width="wrap_content"
-            android:layout_height = "wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/building_img"
-            />
+            app:layout_constraintTop_toBottomOf="@id/building_img" />
 
         <!-- A TextView for our rating of the desserts out of 5-->
         <TextView
@@ -50,12 +50,12 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             app:layout_constraintStart_toStartOf="@id/building_name"
             app:layout_constraintTop_toBottomOf="@id/building_name"
-            app:layout_constraintBottom_toTopOf="@id/noise_building"
+            app:layout_constraintBottom_toTopOf="@id/description_building"
             />
 
         <!-- A TextView for the noise level of the study building-->
         <TextView
-            android:id = "@+id/noise_building"
+            android:id = "@+id/description_building"
             android:layout_width="wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginBottom="8dp"

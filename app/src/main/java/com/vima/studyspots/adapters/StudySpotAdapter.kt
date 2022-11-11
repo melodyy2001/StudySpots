@@ -22,26 +22,42 @@ import com.vima.studyspots.model.StudySpot
  * from the appropriate data source
  */
 class StudySpotAdapter (
-    private val context: Context?,
+    private val context: Context?, private val searchTerm: String,
     ): RecyclerView.Adapter<StudySpotAdapter.StudySpotViewHolder>() {
 
         // Get the study spots data into a list from the DataSource
-        private val studySpotsList = DataSource.studySpots
+        val studySpotsList = filterStudySpots(searchTerm)
 
         companion object {
             fun getStudySpotList(position: Int): StudySpot {
-                val studySpotsList = DataSource.studySpots
-                val spot = studySpotsList[position]
+                val studySpotList = DataSource.studySpots
+                val spot = studySpotList[position]
                 return spot
             }
+
         }
+        // Set filtered list of study spots
+        fun filterStudySpots(searchTerm: String): List<StudySpot> {
+            val allSpots = DataSource.studySpots
+            if (searchTerm == "") {
+                return allSpots
+            }
+            val filteredList = mutableListOf<StudySpot>()
+            for (spot in allSpots) {
+                if (spot.name.contains(searchTerm, ignoreCase = true) || spot.location.contains(searchTerm, ignoreCase = true)) {
+                    filteredList.add(spot)
+                }
+            }
+            return filteredList
+        }
+
         //Initialize view elements
         class StudySpotViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
             // Initialize the list contents
             val imageView: ImageView = view!!.findViewById(R.id.building_img)
             val buildingName: TextView = view!!.findViewById(R.id.building_name)
             val location: TextView = view!!.findViewById(R.id.building_location)
-            val noiseLevel: TextView = view!!.findViewById(R.id.noise_building)
+            val description: TextView = view!!.findViewById(R.id.description_building)
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudySpotViewHolder {
@@ -63,7 +79,7 @@ class StudySpotAdapter (
             // Set the text for the current member's name
             holder.buildingName.text = curData.name
             holder.location.text = curData.location
-            holder.noiseLevel.text = curData.noiseLevel.toString()
+            holder.description.text = "Click me for more information"
 
             holder.itemView.setOnClickListener {
                 // what to do when clicking on item
@@ -79,7 +95,6 @@ class StudySpotAdapter (
            // holder.textView3.text = resources?.getString(R.string., curData.noiseLevel)
 
         }
-
         // for play button
         fun goToProfile(position: Int) {
             val intent = Intent(context, ProfileActivity::class.java)
@@ -87,4 +102,5 @@ class StudySpotAdapter (
             intent.setFlags(FLAG_ACTIVITY_NEW_TASK)
             context?.startActivity(intent)
         }
+
     }

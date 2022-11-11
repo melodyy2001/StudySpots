@@ -21,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.name.text = curData.name
         binding.location.text = curData.location
         binding.imagePreview.setImageDrawable(getResources().getDrawable(curData.imageResourceId))
-        binding.noiseLevel.text = curData.noiseLevel.toString()
+        binding.description.text = "Description: " + curData.description.toString()
 
     }
 }

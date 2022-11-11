@@ -12,7 +12,8 @@ class StudyListActivity : AppCompatActivity() {
 
 
         val recyclerView = findViewById<RecyclerView>(R.id.grid_recycler_view)
-        recyclerView.adapter = StudySpotAdapter(applicationContext)
+        val searchTerm = getIntent().getStringExtra("SearchTerm")
+        recyclerView.adapter = StudySpotAdapter(applicationContext, searchTerm!!)
 
         recyclerView.setHasFixedSize(true)
 
