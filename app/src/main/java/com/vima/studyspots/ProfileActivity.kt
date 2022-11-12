@@ -1,8 +1,10 @@
 package com.vima.studyspots
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.vima.studyspots.adapters.StudySpotAdapter
 import com.vima.studyspots.databinding.ActivityProfileBinding
 import com.vima.studyspots.model.StudyRoom
@@ -33,6 +35,21 @@ class ProfileActivity : AppCompatActivity() {
             goToPrevRoom(curData)
         }
 
+        binding.buttonBookRoom.setOnClickListener {
+            goToWebsite(curData)
+        }
+
+    }
+
+    private fun goToWebsite(building: StudySpot) {
+        if (building.bookURL == "") {
+            Toast.makeText(applicationContext, "No bookings available", Toast.LENGTH_SHORT).show()
+        } else {
+            val webIntent: Intent = Uri.parse(building.bookURL).let { webpage ->
+                Intent(Intent.ACTION_VIEW, webpage)
+            }
+            startActivity(webIntent)
+        }
     }
 
     private fun goToPrevRoom(building: StudySpot) {

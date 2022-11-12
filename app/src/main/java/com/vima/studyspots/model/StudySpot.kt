@@ -10,6 +10,6 @@ data class StudySpot (
     val name: String,
     val location: String,
     val description: String,
-    val studyRooms: MutableList<StudyRoom>
-
+    val studyRooms: MutableList<StudyRoom>,
+    val bookURL: String
 )

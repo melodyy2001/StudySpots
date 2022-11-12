@@ -16,7 +16,8 @@ object DataSource {
                     "is the newly renovated hub for the Chemistry Department. It features some of the largest " +
                     "lecture halls on campus and a variety of public study spaces.",
             mutableListOf(StudyRoom("Welch Lobby", "3/5", "3.5/5",
-                "Area gets busy in between classes", "4/5"))
+                "Area gets busy in between classes", "4/5")),
+            "https://cm.utexas.edu/resources/room-reservations"
         ),
         StudySpot(
             R.drawable.eer,
@@ -26,7 +27,8 @@ object DataSource {
                     "intersect. The first and second floors make up a huge, open lobby area where students" +
                     " from all different majors can be found studying.",
             mutableListOf(StudyRoom("EER Lobby", "2/5", "3/5",
-                "Spans floors 1 and 2.", "2.5/5"))
+                "Spans floors 1 and 2.", "2.5/5")),
+            ""
         ),
         StudySpot(
             R.drawable.energy,
@@ -37,7 +39,8 @@ object DataSource {
                     "conference rooms sprinkled across its 184,000 square feet of space and a lounge with " +
                     "180 degree windows that feature a stunning view of campus.",
             mutableListOf(StudyRoom("TODO", "2/5", "3/5",
-                "TODO.", "2.5/5"))
+                "TODO.", "2.5/5")),
+            ""
         ),
         StudySpot(
             R.drawable.gdc,
@@ -47,7 +50,8 @@ object DataSource {
                     "facing towards the UT Tower. There are seven floors in the GDC with public study areas and a balcony " +
                     "on each of floors 3-6, as well as a computer lab and a back patio.",
                     mutableListOf(StudyRoom("GDC Lobby", "2/5", "2/5",
-                "Location of newly opened Lucky Lab.", "2.5/5"))
+                "Location of newly opened Lucky Lab.", "2.5/5")),
+            "https://www.cs.utexas.edu/department-info/room-reservations"
         ),
         StudySpot(
             R.drawable.geoscience_student_center,
@@ -59,7 +63,8 @@ object DataSource {
             mutableListOf(StudyRoom("Holland Family Student Center", "2.5/5", "3/5",
                 "Enter from the outdoor patio on the South side of JGB", "2/5"),
                 StudyRoom("Geosciences library", "1/5", "3/5",
-                    "Group study tables and individual tables are scattered around the library.", "2/5"))
+                    "Group study tables and individual tables are scattered around the library.", "2/5")),
+            ""
         ),
         StudySpot(
                 R.drawable.pcl_stem_area,
@@ -71,7 +76,8 @@ object DataSource {
         mutableListOf(StudyRoom("Learning labs", "4/5", "4/5",
             "Tucked behind the elevators on the entry level of the PCL", "4/5"),
             StudyRoom("Reservable study rooms", "1/5", "4/5",
-                "Private rooms available for reservation on floors 2-6.", "Private"))
+                "Private rooms available for reservation on floors 2-6.", "Private")),
+            "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room"
     )
     )
 }
