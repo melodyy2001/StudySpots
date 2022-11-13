@@ -78,6 +78,31 @@ object DataSource {
             StudyRoom("Private study rooms", "1/5", "4/5",
                 "Private rooms available for reservation on floors 2-6.", "Private")),
             "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room"
-    )
+        ),
+        StudySpot(
+            R.drawable.fac,
+            "Flawn Academic Center (FAC)",
+            "2304 Whitis Ave, Austin, TX 78712",
+            "The FAC is not just a library but a place for students to collaborate with each other as there are " +
+                    "many collaborative tables. This place is also useful for when your laptop needs to get fixed.",
+            mutableListOf(StudyRoom("First Floor","1/5","3/5",
+            "There are no study rooms for students to reserve", "2/5")),
+        ""
+        ),
+        StudySpot(
+            R.drawable.nhb,
+            "Norman Hackerman Building (NHB)",
+            "100 E 24TH ST, AUSTIN, TX 78712",
+            "The NHB is a CNS building mainly used for research and development but also has ample study spaces " +
+                    " and has quite a few microwaves and fridges.",
+            mutableListOf(StudyRoom("Outside","3/5","3/5",
+                "Outside of the building there are some lounge areas set up which are shaded as well.", "2/5"),
+            StudyRoom("3rd Floor", "1/5", "4/5",
+                "This floor has a pretty big study area with collaborative tables and white boards. On the floor there are " +
+            "also individual study spaces. There is a fridge and microwave in case anyone needs it.","1/5"),StudyRoom
+            ("4th-5th Floor","1/5","4/5","This area does not have a big study collaborative space " +
+                "like the 3rd floor but there are a few individual study areas. Each floor does have one microwave and one fridge.","1/5")),
+            ""
+        )
     )
 }

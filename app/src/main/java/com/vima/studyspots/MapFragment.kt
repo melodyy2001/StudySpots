@@ -75,14 +75,12 @@ class MapFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        googleMap.addMarker(
-            MarkerOptions()
-                .position(LatLng(30.28614, -97.73942))
-                .title("UT Austin"))
+        // Marker for Welch building
         googleMap.addMarker(
             MarkerOptions()
                 .position(LatLng(30.287183167191333, -97.73777850731048))
                 .title("WEL"))
+        // Marker for Engineering building
         googleMap.addMarker(
             MarkerOptions()
                 .position(LatLng(30.28913631032302, -97.73551661569718))
@@ -107,6 +105,16 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                     MarkerOptions()
                         .position(LatLng(30.282830, -97.738020))
                         .title("PCL"))
+        // Marker for NHB
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(LatLng(30.287808772986928, -97.73796525840517))
+                        .title("NHB"))
+        // Marker for FAC
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(LatLng(30.28668906845532, -97.74017027558799))
+                        .title("FAC"))
 
     }
 }
