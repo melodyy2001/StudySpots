@@ -27,8 +27,6 @@ class MapFragment : Fragment(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
-//        mapFragment.getMapAsync(this)
     }
 
     override fun onCreateView(
@@ -89,5 +87,26 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             MarkerOptions()
                 .position(LatLng(30.28913631032302, -97.73551661569718))
                 .title("EER"))
+        // Marker for energy building
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.28724, -97.73598))
+                .title("GLT"))
+        // Marker for gdc
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(LatLng(	30.28641, -97.7371))
+                        .title("GDC"))
+        // Marker for geoscience building
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(LatLng(	30.28591, 	-97.73716))
+                        .title("JGB"))
+        // Marker for PCL
+                googleMap.addMarker(
+                    MarkerOptions()
+                        .position(LatLng(30.282830, -97.738020))
+                        .title("PCL"))
+
     }
 }

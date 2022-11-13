@@ -75,7 +75,7 @@ object DataSource {
                 "six floors, each with its own personality and set of unique study areas.",
         mutableListOf(StudyRoom("Learning labs", "4/5", "4/5",
             "Tucked behind the elevators on the entry level of the PCL", "4/5"),
-            StudyRoom("Reservable study rooms", "1/5", "4/5",
+            StudyRoom("Private study rooms", "1/5", "4/5",
                 "Private rooms available for reservation on floors 2-6.", "Private")),
             "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room"
     )
