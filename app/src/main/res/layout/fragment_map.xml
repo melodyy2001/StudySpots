@@ -6,6 +6,11 @@
     tools:context=".MapFragment">
 
     <!-- Map Fragment: PUT BACK IN -->
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 
     <!-- Input box to search for study spot -->
     <EditText

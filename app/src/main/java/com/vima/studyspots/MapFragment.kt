@@ -9,16 +9,25 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.fragment.app.FragmentActivity
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 /**
  * A simple [Fragment] subclass.
  * Use the [mapFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MapFragment : Fragment() {
+class MapFragment : Fragment(), OnMapReadyCallback {
     //private lateinit var binding: MapFragmentBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+//        mapFragment.getMapAsync(this)
     }
 
     override fun onCreateView(
@@ -62,5 +71,12 @@ class MapFragment : Fragment() {
         val intent = Intent(getActivity(), StudyListActivity::class.java)
         intent.putExtra("SearchTerm", "")
         startActivity(intent)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap) {
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.28614, -97.73942))
+                .title("UT Austin"))
     }
 }
