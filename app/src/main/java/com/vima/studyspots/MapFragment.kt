@@ -16,13 +16,14 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.vima.studyspots.data.DataSource
 
 /**
  * A simple [Fragment] subclass.
  * Use the [mapFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class MapFragment : Fragment(), OnMapReadyCallback {
+class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     //private lateinit var binding: MapFragmentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -115,6 +116,22 @@ class MapFragment : Fragment(), OnMapReadyCallback {
                     MarkerOptions()
                         .position(LatLng(30.28668906845532, -97.74017027558799))
                         .title("FAC"))
+        googleMap.setOnMarkerClickListener (this)
 
+    }
+
+    override fun onMarkerClick(marker: Marker): Boolean {
+        val intent = Intent(getActivity(),ProfileActivity::class.java)
+        val studySpots = DataSource.studySpots
+        var position = 0
+        for (spot in studySpots) {
+            if (marker.title == spot.acronym) {
+                intent.putExtra("Position", position.toString())
+                startActivity(intent)
+                return true
+            }
+            position++
+        }
+        return false
     }
 }

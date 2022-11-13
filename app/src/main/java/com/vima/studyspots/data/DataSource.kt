@@ -17,7 +17,8 @@ object DataSource {
                     "lecture halls on campus and a variety of public study spaces.",
             mutableListOf(StudyRoom("Welch Lobby", "3/5", "3.5/5",
                 "Area gets busy in between classes", "4/5")),
-            "https://cm.utexas.edu/resources/room-reservations"
+            "https://cm.utexas.edu/resources/room-reservations",
+            "WEL"
         ),
         StudySpot(
             R.drawable.eer,
@@ -28,7 +29,8 @@ object DataSource {
                     " from all different majors can be found studying.",
             mutableListOf(StudyRoom("EER Lobby", "2/5", "3/5",
                 "Spans floors 1 and 2.", "2.5/5")),
-            ""
+            "",
+            "EER"
         ),
         StudySpot(
             R.drawable.energy,
@@ -40,7 +42,8 @@ object DataSource {
                     "180 degree windows that feature a stunning view of campus.",
             mutableListOf(StudyRoom("TODO", "2/5", "3/5",
                 "TODO.", "2.5/5")),
-            ""
+            "",
+            "GLT"
         ),
         StudySpot(
             R.drawable.gdc,
@@ -51,7 +54,8 @@ object DataSource {
                     "on each of floors 3-6, as well as a computer lab and a back patio.",
                     mutableListOf(StudyRoom("GDC Lobby", "2/5", "2/5",
                 "Location of newly opened Lucky Lab.", "2.5/5")),
-            "https://www.cs.utexas.edu/department-info/room-reservations"
+            "https://www.cs.utexas.edu/department-info/room-reservations",
+            "GDC"
         ),
         StudySpot(
             R.drawable.geoscience_student_center,
@@ -64,7 +68,8 @@ object DataSource {
                 "Enter from the outdoor patio on the South side of JGB", "2/5"),
                 StudyRoom("Geosciences library", "1/5", "3/5",
                     "Group study tables and individual tables are scattered around the library.", "2/5")),
-            ""
+            "",
+            "JGB"
         ),
         StudySpot(
                 R.drawable.pcl_stem_area,
@@ -77,7 +82,8 @@ object DataSource {
             "Tucked behind the elevators on the entry level of the PCL", "4/5"),
             StudyRoom("Private study rooms", "1/5", "4/5",
                 "Private rooms available for reservation on floors 2-6.", "Private")),
-            "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room"
+            "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room",
+        "PCL"
         ),
         StudySpot(
             R.drawable.fac,
@@ -87,7 +93,8 @@ object DataSource {
                     "many collaborative tables. This place is also useful for when your laptop needs to get fixed.",
             mutableListOf(StudyRoom("First Floor","1/5","3/5",
             "There are no study rooms for students to reserve", "2/5")),
-        ""
+        "",
+            "FAC"
         ),
         StudySpot(
             R.drawable.nhb,
@@ -102,7 +109,8 @@ object DataSource {
             "also individual study spaces. There is a fridge and microwave in case anyone needs it.","1/5"),StudyRoom
             ("4th-5th Floor","1/5","4/5","This area does not have a big study collaborative space " +
                 "like the 3rd floor but there are a few individual study areas. Each floor does have one microwave and one fridge.","1/5")),
-            ""
+            "",
+            "NHB"
         )
     )
 }
