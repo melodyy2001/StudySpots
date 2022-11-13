@@ -14,6 +14,7 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
 /**
@@ -45,6 +46,8 @@ class MapFragment : Fragment(), OnMapReadyCallback {
         searchButton.setOnClickListener {
             performSearch(view)
         }
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
         return view
     }
 
@@ -78,5 +81,13 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             MarkerOptions()
                 .position(LatLng(30.28614, -97.73942))
                 .title("UT Austin"))
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.287183167191333, -97.73777850731048))
+                .title("WEL"))
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.28913631032302, -97.73551661569718))
+                .title("EER"))
     }
 }
