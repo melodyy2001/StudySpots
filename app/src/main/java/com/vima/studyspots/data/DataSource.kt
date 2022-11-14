@@ -16,9 +16,12 @@ object DataSource {
                     "is the newly renovated hub for the Chemistry Department. It features some of the largest " +
                     "lecture halls on campus and a variety of public study spaces.",
             mutableListOf(StudyRoom("Welch Lobby", "3/5", "3.5/5",
-                "Area gets busy in between classes", "4/5")),
+                "Area gets busy in between classes", "4/5"),
+                StudyRoom("Welch Basement", "2/5", "3/5",
+                    "Features small tables that fit three and a few benches", "3/5")),
             "https://cm.utexas.edu/resources/room-reservations",
-            "WEL"
+            "WEL",
+            0
         ),
         StudySpot(
             R.drawable.eer,
@@ -28,9 +31,12 @@ object DataSource {
                     "intersect. The first and second floors make up a huge, open lobby area where students" +
                     " from all different majors can be found studying.",
             mutableListOf(StudyRoom("EER Lobby", "2/5", "3/5",
-                "Spans floors 1 and 2.", "2.5/5")),
+                "Spans floors 1 and 2.", "2.5/5"),
+                StudyRoom("EER private rooms", "1.5/5", "4/5",
+                "Located on the first floor behind the main stairs.", "4/5")),
             "",
-            "EER"
+            "EER",
+            1
         ),
         StudySpot(
             R.drawable.energy,
@@ -40,10 +46,11 @@ object DataSource {
                     "engineering quad, opening to the public in the Fall of 2022. There are " +
                     "conference rooms sprinkled across its 184,000 square feet of space and a lounge with " +
                     "180 degree windows that feature a stunning view of campus.",
-            mutableListOf(StudyRoom("TODO", "2/5", "3/5",
-                "TODO.", "2.5/5")),
+            mutableListOf(StudyRoom("GLT Lounge", "2/5", "4/5",
+                "Has one of the best campus views of the UT tower.", "4/5")),
             "",
-            "GLT"
+            "GLT",
+            2
         ),
         StudySpot(
             R.drawable.gdc,
@@ -53,9 +60,14 @@ object DataSource {
                     "facing towards the UT Tower. There are seven floors in the GDC with public study areas and a balcony " +
                     "on each of floors 3-6, as well as a computer lab and a back patio.",
                     mutableListOf(StudyRoom("GDC Lobby", "2/5", "2/5",
-                "Location of newly opened Lucky Lab.", "2.5/5")),
+                "Location of newly opened Lucky Lab.", "2.5/5"),
+                        StudyRoom("GDC Basement Lounge and Lab", "2/5", "3/5",
+                            "Lacking in natural light and known for its distinctive smell.", "2.5/5"),
+                        StudyRoom("Third floor computer lab", "3.5/5", "3/5",
+                            "Location of the CS org lounges and 314 help hours.", "3.5/5")),
             "https://www.cs.utexas.edu/department-info/room-reservations",
-            "GDC"
+            "GDC",
+            3
         ),
         StudySpot(
             R.drawable.geoscience_student_center,
@@ -69,7 +81,8 @@ object DataSource {
                 StudyRoom("Geosciences library", "1/5", "3/5",
                     "Group study tables and individual tables are scattered around the library.", "2/5")),
             "",
-            "JGB"
+            "JGB",
+            4
         ),
         StudySpot(
                 R.drawable.pcl_stem_area,
@@ -83,7 +96,8 @@ object DataSource {
             StudyRoom("Private study rooms", "1/5", "4/5",
                 "Private rooms available for reservation on floors 2-6.", "Private")),
             "https://www.lib.utexas.edu/study-spaces-technology/reserve-study-room",
-        "PCL"
+        "PCL",
+            5
         ),
         StudySpot(
             R.drawable.fac,
@@ -94,7 +108,8 @@ object DataSource {
             mutableListOf(StudyRoom("First Floor","1/5","3/5",
             "There are no study rooms for students to reserve", "2/5")),
         "",
-            "FAC"
+            "FAC",
+            6
         ),
         StudySpot(
             R.drawable.nhb,
@@ -110,7 +125,32 @@ object DataSource {
             ("4th-5th Floor","1/5","4/5","This area does not have a big study collaborative space " +
                 "like the 3rd floor but there are a few individual study areas. Each floor does have one microwave and one fridge.","1/5")),
             "",
-            "NHB"
+            "NHB",
+            7
+        ),
+        StudySpot(
+            R.drawable.jester,
+            "Jester East Residence Hall",
+            "201 E 21st St\n" +
+                    "Austin, TX 78705",
+            "The Red River Lounge is a study area located in Jester East, which is the smaller of Jester Center’s towering two residence halls that sits at the heart of campus’s south side, nestled between Jester West Hall and the Brackenridge, Roberts and Prather (BRP) courtyard.",
+            mutableListOf( StudyRoom("Jester East Red River Lounge", "1/5", "4/5",
+                "There's also a cool longhorn art located on the wall!", "No people going in and out, and no doors closing.")),
+            "",
+            "JES",
+            8
+        ),
+        StudySpot(
+            R.drawable.duren,
+            "Duren Residence Hall (ADH)",
+            "2624 Whitis Ave\n" +
+                    "Austin, TX 78705",
+            "The Duren Formal Lounge is a lounge bright-lit area located in Duren, which is on the northwest edge of campus and pays homage to UT Austin’s rich history while offering modern amenities. The lounge has many tables and comfortable chairs while maintaining a bright-lit room for studying. ",
+            mutableListOf( StudyRoom("Duren Formal Lounge", "2/5", "4/5",
+                "There's also a piano in the room for anyone who knows how to play!", "No people going in and out, and no doors closing.")),
+            "",
+            "ADH",
+            9
         )
     )
 }

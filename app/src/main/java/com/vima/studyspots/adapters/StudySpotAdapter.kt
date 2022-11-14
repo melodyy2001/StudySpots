@@ -83,7 +83,7 @@ class StudySpotAdapter (
 
             holder.itemView.setOnClickListener {
                 // what to do when clicking on item
-                goToProfile(position)
+                goToProfile(curData.position)
             }
             // MISSING PIECES ON GETSTRING METHOD
             // LAST TEXTVIEW IS SUPPOSED TO BE A DOUBLE
