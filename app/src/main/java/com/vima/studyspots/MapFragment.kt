@@ -94,7 +94,7 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
         // Marker for gdc
                 googleMap.addMarker(
                     MarkerOptions()
-                        .position(LatLng(	30.28641, -97.7371))
+                        .position(LatLng(	30.28620, -97.7367))
                         .title("GDC"))
         // Marker for geoscience building
                 googleMap.addMarker(
@@ -116,6 +116,16 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
                     MarkerOptions()
                         .position(LatLng(30.28668906845532, -97.74017027558799))
                         .title("FAC"))
+        // Marker for Duren
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.2915949, -97.7403658))
+                .title("ADH"))
+        // Marker for Jester East
+        googleMap.addMarker(
+            MarkerOptions()
+                .position(LatLng(30.2828041, -97.7368371))
+                .title("JES"))
         googleMap.setOnMarkerClickListener (this)
 
     }
