@@ -1,9 +1,14 @@
 package com.vima.studyspots
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.vima.studyspots.adapters.StudySpotAdapter
 import com.vima.studyspots.databinding.ActivityProfileBinding
@@ -31,12 +36,17 @@ class ProfileActivity : AppCompatActivity() {
         binding.roomButtonRight.setOnClickListener {
             goToNextRoom(curData)
         }
-        binding.roomButtonLeft.setOnClickListener {
-            goToPrevRoom(curData)
-        }
+        if (curData.studyRooms.size == 1) {
+            binding.roomButtonLeft.setVisibility(View.INVISIBLE)
+            binding.roomButtonRight.setVisibility(View.INVISIBLE)
+        } else {
+            binding.roomButtonLeft.setOnClickListener {
+                goToPrevRoom(curData)
+            }
 
-        binding.buttonBookRoom.setOnClickListener {
-            goToWebsite(curData)
+            binding.buttonBookRoom.setOnClickListener {
+                goToWebsite(curData)
+            }
         }
 
     }
@@ -52,7 +62,25 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
+    fun ObjectAnimator.disableDuringAnimation(view: View) {
+        addListener(object : AnimatorListenerAdapter() {
+            override fun onAnimationStart(animation: Animator?) {
+                view.isEnabled = false
+            }
+            override fun onAnimationEnd(animation: Animator?) {
+                view.isEnabled = true
+            }
+        })
+    }
+
     private fun goToPrevRoom(building: StudySpot) {
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 2f)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 2f)
+        val animator = ObjectAnimator.ofPropertyValuesHolder(binding.roomButtonLeft, scaleX, scaleY)
+        animator.repeatCount = 1
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.disableDuringAnimation(binding.roomButtonLeft)
+        animator.start()
         roomIndex--
         if (roomIndex == -1) {
             roomIndex = building.studyRooms.size - 1
@@ -61,6 +89,13 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun goToNextRoom(building: StudySpot) {
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 1.5f)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.5f)
+        val animator = ObjectAnimator.ofPropertyValuesHolder(binding.roomButtonRight, scaleX, scaleY)
+        animator.repeatCount = 1
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.disableDuringAnimation(binding.roomButtonRight)
+        animator.start()
         roomIndex++
         if (roomIndex == building.studyRooms.size) {
             roomIndex = 0
