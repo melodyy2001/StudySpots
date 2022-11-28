@@ -68,7 +68,7 @@
             android:id="@+id/description"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:text="Description: the description of the study sport. If there is something unique about this study spot that information is also listed here."
+            android:text="Description: the description of the study spot. If there is something unique about this study spot that information is also listed here."
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(MapFragment(), "Home")
         adapter.addFragment(FavoritesFragment(), "About")
+
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
         viewPager.adapter = adapter
         val tabs = findViewById<TabLayout>(R.id.tabs)

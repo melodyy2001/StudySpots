@@ -104,7 +104,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     fun setRoom(curRoom: StudyRoom) {
-        binding.roomName.text = curRoom.name
+        binding.roomName.text = "Space: " + curRoom.name
         binding.noiseLevel.text = "Noise level: " + curRoom.noiseLevel
         binding.comfortability.text = "Comfortability: " + curRoom.comfortability
         binding.roomDescription.text = "About: " + curRoom.description
