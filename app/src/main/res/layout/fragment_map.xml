@@ -22,7 +22,7 @@
     <!-- Input box to search for study spot -->
     <EditText
         android:id="@+id/search_bar"
-        android:layout_width="230dp"
+        android:layout_width="220dp"
         android:layout_height="40dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
@@ -42,7 +42,7 @@
     <!-- Button to look through study spots for search term -->
     <Button
         android:id="@+id/searchButton"
-        android:layout_width="70dp"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginStart="280dp"
         android:layout_marginTop="8dp"
