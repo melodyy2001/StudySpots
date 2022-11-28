@@ -11,6 +11,7 @@ object DataSource {
         StudySpot(
             R.drawable.welch,
             "Robert A. Welch Hall (WEL)",
+            "Welch Building",
             "105 E 24th St, Austin, TX 78705",
             "Located across from the Gates-Dell Complex and at the heart of campus, Welch Hall " +
                     "is the newly renovated hub for the Chemistry Department. It features some of the largest " +
@@ -26,6 +27,7 @@ object DataSource {
         StudySpot(
             R.drawable.eer,
             "Engineering Education and Research Center (EER)",
+            "The EER",
             "2501 Speedway, Austin, TX 78712",
             "The EER is located at the Northern tip of campus where Dean Keeton and Speedway " +
                     "intersect. The first and second floors make up a huge, open lobby area where students" +
@@ -41,6 +43,7 @@ object DataSource {
         StudySpot(
             R.drawable.energy,
             "Gary L. Thomas Energy Engineering Building (GLT)",
+            "GLT Energy Building",
             "210 E 24th St, Austin, TX 78712",
             "Located just steps away from the EER, the energy building is the newest edition to the " +
                     "engineering quad, opening to the public in the Fall of 2022. There are " +
@@ -55,6 +58,7 @@ object DataSource {
         StudySpot(
             R.drawable.gdc,
             "Gates Dell Complex (GDC)",
+            "GDC Building",
             "2317 SPEEDWAY, AUSTIN, TX 78712",
             "The Gates-Dell Complex can be found at the center of Speedway, located across from Welch and " +
                     "facing towards the UT Tower. There are seven floors in the GDC with public study areas and a balcony " +
@@ -72,6 +76,7 @@ object DataSource {
         StudySpot(
             R.drawable.geoscience_student_center,
             "Jackson Geological Sciences Building (JGB)",
+            "Jackson Geological Science Building",
             "2305 SPEEDWAY, AUSTIN, TX 78712",
             "The Jackson Geosciences Building is tucked away behind the GDC and is" +
                     " the location of a wide range of study areas including a student center off the " +
@@ -87,6 +92,7 @@ object DataSource {
         StudySpot(
                 R.drawable.pcl_stem_area,
         "Perry-Castañeda Library (PCL)",
+            "The PCL",
         "101 E. 21st Street\n" +
                 "Austin, Texas 78712",
         "The PCL is the largest on-campus library, located at the Southern tip of Speedway and featuring " +
@@ -102,6 +108,7 @@ object DataSource {
         StudySpot(
             R.drawable.fac,
             "Flawn Academic Center (FAC)",
+            "The FAC",
             "2304 Whitis Ave, Austin, TX 78712",
             "The FAC is not just a library but a place for students to collaborate with each other as there are " +
                     "many collaborative tables. This place is also useful for when your laptop needs to get fixed.",
@@ -114,6 +121,7 @@ object DataSource {
         StudySpot(
             R.drawable.nhb,
             "Norman Hackerman Building (NHB)",
+            "The NHB",
             "100 E 24TH ST, AUSTIN, TX 78712",
             "The NHB is a CNS building mainly used for research and development but also has ample study spaces " +
                     " and has quite a few microwaves and fridges.",
@@ -131,6 +139,7 @@ object DataSource {
         StudySpot(
             R.drawable.jester,
             "Jester East Residence Hall",
+            "Jester Hall",
             "201 E 21st St\n" +
                     "Austin, TX 78705",
             "The Red River Lounge is a study area located in Jester East, which is the smaller of Jester Center’s towering two residence halls that sits at the heart of campus’s south side, nestled between Jester West Hall and the Brackenridge, Roberts and Prather (BRP) courtyard.",
@@ -143,6 +152,7 @@ object DataSource {
         StudySpot(
             R.drawable.duren,
             "Duren Residence Hall (ADH)",
+            "Duren Hall",
             "2624 Whitis Ave\n" +
                     "Austin, TX 78705",
             "The Duren Formal Lounge is a lounge bright-lit area located in Duren, which is on the northwest edge of campus and pays homage to UT Austin’s rich history while offering modern amenities. The lounge has many tables and comfortable chairs while maintaining a bright-lit room for studying. ",

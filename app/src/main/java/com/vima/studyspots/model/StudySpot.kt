@@ -8,6 +8,7 @@ import androidx.annotation.DrawableRes
 data class StudySpot (
     @DrawableRes val imageResourceId: Int,
     val name: String,
+    val contentDescription: String,
     val location: String,
     val description: String,
     val studyRooms: MutableList<StudyRoom>,
