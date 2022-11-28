@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
 
-
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -32,8 +31,7 @@
             app:tabTextAppearance="@style/CustomTabStyle"
             app:tabGravity="fill"
             app:tabInlineLabel="true"
-            app:tabMode ="fixed"
-            app:tabTextColor="@android:color/white"/>
+            app:tabMode ="fixed" />
     </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager.widget.ViewPager
